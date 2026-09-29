@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridView xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:id="@+id/gridview"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  android:background="@color/black"
-  android:gravity="fill"
-  android:numColumns="3"
-  android:padding="5px"
-  android:stretchMode="columnWidth"
-  tools:context=".MainActivity" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progressTint="#00E5FF"
+        android:visibility="gone" />
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="fill"
+        android:numColumns="3"
+        android:padding="5px"
+        android:stretchMode="columnWidth" />
+</LinearLayout>
