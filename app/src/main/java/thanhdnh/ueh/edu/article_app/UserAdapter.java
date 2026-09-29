@@ -13,50 +13,50 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 
 public class UserAdapter extends BaseAdapter {
-    private ArrayList<UserProfile> user_list;
-    private Context context;
+  private ArrayList<UserProfile> user_list;
+  private Context context;
 
-    public UserAdapter(ArrayList<UserProfile> user_list, Context context) {
-        this.user_list = user_list;
-        this.context = context;
+  public UserAdapter(ArrayList<UserProfile> user_list, Context context) {
+    this.user_list = user_list;
+    this.context = context;
+  }
+
+  @Override
+  public int getCount() {
+    return user_list.size();
+  }
+
+  @Override
+  public Object getItem(int position) {
+    return user_list.get(position);
+  }
+
+  @Override
+  public long getItemId(int position) {
+    return user_list.get(position).getId();
+  }
+
+  @Override
+  public View getView(int position, View convertView, ViewGroup parent) {
+    final MyView dataitem;
+    LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    if (convertView == null) {
+      dataitem = new MyView();
+      convertView = inflater.inflate(R.layout.user_disp_tpl, null);
+      dataitem.iv_photo = convertView.findViewById(R.id.imv_photo);
+      dataitem.tv_caption = convertView.findViewById(R.id.tv_title);
+      convertView.setTag(dataitem);
+    } else {
+      dataitem = (MyView) convertView.getTag();
     }
 
-    @Override
-    public int getCount() {
-        return user_list.size();
-    }
+    Picasso.get().load(user_list.get(position).getAvatar_url()).resize(300, 400).centerCrop().into(dataitem.iv_photo);
+    dataitem.tv_caption.setText(user_list.get(position).getUsername());
+    return convertView;
+  }
 
-    @Override
-    public Object getItem(int position) {
-        return user_list.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return user_list.get(position).getId();
-    }
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        final MyView dataitem;
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        if (convertView == null) {
-            dataitem = new MyView();
-            convertView = inflater.inflate(R.layout.user_disp_tpl, null);
-            dataitem.iv_photo = convertView.findViewById(R.id.imv_photo);
-            dataitem.tv_caption = convertView.findViewById(R.id.tv_title);
-            convertView.setTag(dataitem);
-        } else {
-            dataitem = (MyView) convertView.getTag();
-        }
-
-        Picasso.get().load(user_list.get(position).getAvatar_url()).resize(300, 400).centerCrop().into(dataitem.iv_photo);
-        dataitem.tv_caption.setText(user_list.get(position).getUsername());
-        return convertView;
-    }
-
-    private static class MyView {
-        ImageView iv_photo;
-        TextView tv_caption;
-    }
+  private static class MyView {
+    ImageView iv_photo;
+    TextView tv_caption;
+  }
 }

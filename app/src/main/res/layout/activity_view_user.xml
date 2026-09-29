@@ -1,121 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0F0F0"
+    android:background="#161722"
     tools:context=".ViewUserActivity">
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/sv_detail_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
+        android:layout_height="match_parent"
+        android:visibility="invisible">
 
-        <!-- Card -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/card_background"
             android:orientation="vertical"
-            android:padding="24dp">
+            android:padding="16dp">
 
-            <!-- Top section: Username + ID on left, Avatar on right -->
-            <LinearLayout
+            <ImageView
+                android:id="@+id/iv_detail"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:scaleType="centerCrop"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tv_detail_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_gravity="center"
+                android:fontFamily="cursive"
+                android:paddingTop="14dp"
+                android:paddingBottom="10dp"
+                android:text="Singer Name"
+                android:textAlignment="center"
+                android:textColor="#00E5FF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-                <!-- Name + ID -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:paddingEnd="12dp">
-
-                    <TextView
-                        android:id="@+id/tv_detail_username"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="cursive"
-                        android:text="Username"
-                        android:textColor="#000000"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tv_detail_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="ID"
-                        android:textColor="#666666"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <!-- Avatar -->
-                <ImageView
-                    android:id="@+id/iv_avatar"
-                    android:layout_width="130dp"
-                    android:layout_height="130dp"
-                    android:background="@drawable/rounded_avatar_bg"
-                    android:clipToOutline="true"
-                    android:scaleType="centerCrop"
-                    tools:srcCompat="@tools:sample/avatars" />
-            </LinearLayout>
-
-            <!-- Spacer -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="32dp" />
-
-            <!-- Email -->
             <TextView
                 android:id="@+id/tv_detail_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="casual"
-                android:text="Email:"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="Email: "
+                android:textColor="#FFD54F"
+                android:textSize="16sp" />
 
-            <!-- Tel -->
             <TextView
                 android:id="@+id/tv_detail_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:fontFamily="casual"
-                android:text="Tel:"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="Tel: "
+                android:textColor="#81D4FA"
+                android:textSize="16sp" />
 
-            <!-- Hobby -->
             <TextView
                 android:id="@+id/tv_detail_hobby"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:fontFamily="casual"
-                android:text="Hobby:"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:paddingTop="4dp"
+                android:paddingBottom="6dp"
+                android:text="Hobby: "
+                android:textColor="#A5D6A7"
+                android:textSize="16sp" />
 
-            <!-- Description -->
             <TextView
                 android:id="@+id/tv_detail_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:fontFamily="casual"
+                android:lineSpacingExtra="4dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="40dp"
                 android:text="Description"
-                android:textColor="#444444"
-                android:textSize="14sp" />
-
+                android:textColor="#FF9100"
+                android:textSize="16sp" />
         </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_detail_progress"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/progressBarDetail"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="#00E5FF" />
+
+        <TextView
+            android:id="@+id/tv_detail_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="0%"
+            android:textColor="#00E5FF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
     </LinearLayout>
-</ScrollView>
+</FrameLayout>
