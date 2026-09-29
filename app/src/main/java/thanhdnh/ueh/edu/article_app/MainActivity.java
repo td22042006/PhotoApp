@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         tvProgress = findViewById(R.id.tv_progress);
 
-        // Tải danh sách 10 ca sĩ Việt Nam từ internet kèm thanh tiến trình ở giữa màn hình
-        new UserData(getBaseContext(), gridview).loadData("https://dpaste.org/6wABx/raw", this, llProgress, progressBar, tvProgress);
+        // Tải danh sách User từ GitHub Raw
+        new UserData(getBaseContext(), gridview).loadData("https://raw.githubusercontent.com/td22042006/PhotoApp/master/user.json", this, llProgress, progressBar, tvProgress);
         gridview.setOnItemClickListener(onitemclick);
     }
 }
