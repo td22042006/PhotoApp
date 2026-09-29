@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Sơn Tùng M-TP",
+      "email": "sontung@mtp.com",
+      "phone": "0901234567",
+      "description": "Vietnamese singer-songwriter and producer, one of the most successful pop icons in contemporary V-pop.",
+      "avatar_url": "https://raw.githubusercontent.com/td22042006/PhotoApp/master/images/sontung.jpg",
+      "hobby": "Singing, Composing, Fashion"
+    },
+    {
+      "id": 2,
+      "username": "Mỹ Tâm",
+      "email": "mytam@entertainment.com",
+      "phone": "0912345678",
+      "description": "Renowned Vietnamese pop singer, celebrated as the Queen of V-Pop with a legendary multi-decade music career.",
+      "avatar_url": "https://raw.githubusercontent.com/td22042006/PhotoApp/master/images/mytam.jpg",
+      "hobby": "Singing, Dancing, Charity"
+    },
+    {
+      "id": 3,
+      "username": "Đen Vâu",
+      "email": "denvau@music.com",
+      "phone": "0983456789",
+      "description": "Famous Vietnamese rapper and songwriter known for poetic lyrics, reflective storytelling, and community service.",
+      "avatar_url": "https://raw.githubusercontent.com/td22042006/PhotoApp/master/images/denvau.jpg",
+      "hobby": "Writing, Traveling, Nature"
+    },
+    {
+      "id": 4,
+      "username": "Hồ Ngọc Hà",
+      "email": "hongocha@entertainment.com",
+      "phone": "0934567890",
+      "description": "Prominent Vietnamese pop and dance singer, actress, and model known for vibrant stage performances.",
+      "avatar_url": "https://raw.githubusercontent.com/td22042006/PhotoApp/master/images/hongocha.jpg",
+      "hobby": "Fashion, Yoga, Cooking"
+    },
+    {
+      "id": 5,
+      "username": "Soobin Hoàng Sơn",
+      "email": "soobin@spacespeakers.com",
+      "phone": "0945678901",
+      "description": "Versatile Vietnamese singer, songwriter, and multi-instrumentalist from the prominent SpaceSpeakers crew.",
+      "avatar_url": "https://raw.githubusercontent.com/td22042006/PhotoApp/master/images/soobin.png",
+      "hobby": "Piano, Composing, Gaming"
+    },
+    {
+      "id": 6,
+      "username": "Đông Nhi",
+      "email": "dongnhi@entertainment.com",
+      "phone": "0956789012",
+      "description": "Award-winning Vietnamese pop singer and MTV EMA Best Southeast Asian Act recipient.",
+      "avatar_url": "https://raw.githubusercontent.com/td22042006/PhotoApp/master/images/dongnhi.jpg",
+      "hobby": "Dancing, Photography, Cooking"
+    },
+    {
+      "id": 7,
+      "username": "Noo Phước Thịnh",
+      "email": "noophuocthinh@music.com",
+      "phone": "0967890123",
+      "description": "Popular Vietnamese pop singer known for powerful romantic ballads and top-tier vocal techniques.",
+      "avatar_url": "https://raw.githubusercontent.com/td22042006/PhotoApp/master/images/noophuocthinh.jpg",
+      "hobby": "Singing, Swimming, Travel"
+    },
+    {
+      "id": 8,
+      "username": "Bích Phương",
+      "email": "bichphuong@music.com",
+      "phone": "0978901234",
+      "description": "Trendsetting Vietnamese pop sensation known for viral pop hits and modern storytelling music videos.",
+      "avatar_url": "https://raw.githubusercontent.com/td22042006/PhotoApp/master/images/bichphuong.png",
+      "hobby": "Gaming, Cooking, Reading"
+    },
+    {
+      "id": 9,
+      "username": "HIEUTHUHAI",
+      "email": "hieuthuhai@gerdnang.com",
+      "phone": "0989012345",
+      "description": "Leading Vietnamese rap artist, King of Rap standout, and top hitmaker across streaming charts.",
+      "avatar_url": "https://raw.githubusercontent.com/td22042006/PhotoApp/master/images/hieuthuhai.png",
+      "hobby": "Rap, Football, Fashion"
+    },
+    {
+      "id": 10,
+      "username": "Hòa Minzy",
+      "email": "hoaminzy@entertainment.com",
+      "phone": "0990123456",
+      "description": "Acclaimed Vietnamese ballad powerhouse vocalist and champion of Star Academy Vietnam.",
+      "avatar_url": "https://raw.githubusercontent.com/td22042006/PhotoApp/master/images/hoaminzy.jpg",
+      "hobby": "Singing, Acting, Travel"
+    }
+  ]
+}
